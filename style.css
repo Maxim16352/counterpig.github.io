@@ -1,5 +1,8 @@
-.container{
-    max-width: 380px;
+.container {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    overflow-x: hidden; /* предотвращает горизонтальную прокрутку */
 }
 @font-face {
     font-family: 'Fascinate';
@@ -127,3 +130,4 @@
         0 6px 22px rgba(0,0,0,0.14);
 
 }
+
