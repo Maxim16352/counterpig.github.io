@@ -93,7 +93,7 @@ html, body {
     font-size: 12px;
     color: #585858 ;
     margin-top: 50px;  
-    margin-right: 100px;
+    margin-right: 80px;
 }
 
 
@@ -104,10 +104,9 @@ html, body {
         0 6px 22px rgba(0,0,0,0.14);
 }
 .glass-button {
-    width: 363px;
+    width: 345px;
     height: 70px;
-    margin-bottom: 24px;
-    margin-top: 150px;
+    margin-top: 100px;
     font-family: 'Fascinate1', Arial, sans-serif;
     font-size: 20px;
     color:  #585858;
