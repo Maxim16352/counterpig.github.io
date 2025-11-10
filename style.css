@@ -8,36 +8,55 @@ html, body {
     background: #f2f2f2;
 }
 
-.container {
-    max-width: 480px;
-    margin: 0 auto;
-}
-
-@font-face {
-    font-family: 'Fascinate';
-    src: url('SFProText-Regular.ttf') format('truetype');
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Fascinate1';
-    src: url('SFProText-Bold.ttf') format('truetype');
-    font-display: swap;
-}
-
-/* Контейнер */
+/* Контейнер тянется полностью */
 .glass-container {
     position: relative;
-    margin-top: 45px;
-    width: 100%;
-    min-height: calc(100vh - 45px);
+    width: calc(100% - 2px); /* слегка сужаем, чтобы края не обрезались */
+    height: calc(100vh - 45px);
+    margin: 45px auto 0 auto; /* центрируем и добавляем отступ сверху */
     padding: 24px 16px;
+
     border-radius: 28px 28px 0 0;
     background: rgba(255, 255, 255, 0.28);
     backdrop-filter: blur(22px) saturate(160%);
     -webkit-backdrop-filter: blur(22px) saturate(160%);
     border: 1px solid rgba(255,255,255,0.36);
     box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    box-sizing: border-box; /* чтобы padding не ломал ширину */
+}
+
+/* Подключение шрифтов */
+@font-face {
+    font-family: 'Fascinate';
+    src: url('SFProText-Regular.ttf') format('truetype');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Fascinate1';
+    src: url('SFProText-Bold.ttf') format('truetype');
+    font-display: swap;
+}
+
+/* Основной блок */
+.glass-container {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 45px); /* оставляем место сверху */
+    margin-top: 45px; /* отступ сверху */
+    padding: 24px 16px;
+
+    border-radius: 28px 28px 0 0; /* скругление только сверху */
+    background: rgba(255, 255, 255, 0.28);
+    backdrop-filter: blur(22px) saturate(160%);
+    -webkit-backdrop-filter: blur(22px) saturate(160%);
+    border: 1px solid rgba(255,255,255,0.36);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -53,7 +72,7 @@ html, body {
     text-align: center;
 }
 
-/* Картинка */
+/* Гифка */
 .pepe {
     margin-top: 32px;
     max-width: 70%;
@@ -157,5 +176,6 @@ html, body {
 
     .glass-container {
         padding: 20px 12px;
+        border-radius: 28px 28px 0 0;
     }
 }
