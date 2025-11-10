@@ -170,8 +170,7 @@ html, body {
     }
 
     .textAreaLabel {
-        font-size: 12px;
-        margin-left: 6px;
+        font-size: 13px;
     }
 
     .glass-container {
@@ -179,5 +178,6 @@ html, body {
         border-radius: 28px 28px 0 0;
     }
 }
+
 
 
