@@ -117,7 +117,7 @@ html, body {
     transition: 0.2s ease;
 }
 
-.glass-textarea:focus {
+.glass-textarea:focus, .glass-textarea:hover {
     border-color: rgba(0,122,255,0.45); 
     box-shadow: inset 0 0 0 1px rgba(0,122,255,0.55), 0 6px 22px rgba(0,0,0,0.14);
 }
@@ -141,7 +141,7 @@ html, body {
     transition: all 0.25s ease;
 }
 
-.glass-button:active {
+.glass-button:active, .glass-button:hover {
     border-color: rgba(0,122,255,0.45); 
     box-shadow: inset 0 0 0 1px rgba(0,122,255,0.55), 0 6px 22px rgba(0,0,0,0.14);
 }
@@ -179,4 +179,5 @@ html, body {
         border-radius: 28px 28px 0 0;
     }
 }
+
 
