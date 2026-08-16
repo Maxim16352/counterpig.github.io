@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='//fonts.googleapis.com/css?family=Montserrat:thin,extra-light,light,100,200,300,400,500,600,700,800' 
+rel='stylesheet' type='text/css'>
+  <style>
+  
+    .table-wrapper {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      max-width: 1000px;
+      font-family: 'Montserrat', sans-serif;
+      margin: 0 auto;
+      border-spacing: 0 16px; 
+      border-collapse: collapse;
+      background: #ffffff;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 12px 14px;
+      text-align: left;
+      vertical-align: center;
+      word-break: break-word;
+    }
+    tr th:first-child {
+      border-bottom: 2px solid #f8f8f8;
+      margin-top: 10px;
+    }
+
+    th {
+      background: #f9f9f9;
+      font-weight: 600;
+      width: 30%;
+      white-space: nowrap;
+    }
+
+    td {
+      width: 70%;
+    }
+
+    ul {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      padding-left: 18px;
+      list-style-type: none;
+    }
+
+    li {
+      margin: 6px 0;
+    }
+
+    @media (max-width: 600px) {
+      th, td {
+        padding: 10px;
+        font-size: 14px;
+      }
+
+      table {
+        font-size: 14px;
+      }
+
+      th {
+        width: 40%;
+      }
+
+      td {
+        width: 60%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="table-wrapper">
+    <div id="tableContainer"></div>
+  </div>
+  <img src="https://static.tildacdn.com/stor6264-3464-4863-a439-346563343930/e6d5b7d5d1bdfdfd43597455f0ebbed9.png" alt="">
+  <script>
+    // === ТВОИ ДАННЫЕ ===
+    const data = {
+      "Плата Фруктовое пианино 2.0 1 шт.": ['<img src="https://static.tildacdn.com/stor6264-3464-4863-a439-346563343930/e6d5b7d5d1bdfdfd43597455f0ebbed9.png" alt="" style="width: 250px; height: 250px; object-fit: cover; border-radius: 15px;">'],
+      "Антистатический браслет 1 шт.": ['<img src="https://static.tildacdn.com/stor3437-6334-4365-b162-376461353537/6e5eef80521e430e1d3355b21c691ac7.png" alt="" style="width: 250px; height: 250px; object-fit: cover; border-radius: 15px;">'],
+      "Провода-крокодилы 12 штук": ['<img src="https://static.tildacdn.com/stor3434-6166-4564-b536-343130636266/606fe2077f96b52bcf74b5e3f7389de9.png" alt="" style="width: 250px; height: 250px; object-fit: cover; border-radius: 15px;">'],
+      "Пластиковая подставка 1 шт.": ['<img src="https://static.tildacdn.com/stor6231-3565-4861-a166-653463323432/5c79766b40299f3300b5d8197afce39f.png" alt="" style="width: 250px; height: 250px; object-fit: cover; border-radius: 15px;">']
+    };
+
+    // === ФУНКЦИЯ АВТОГЕНЕРАЦИИ ТАБЛИЦЫ ===
+    function buildAutoVerticalTable(data) {
+      const container = document.getElementById("tableContainer");
+      container.innerHTML = "";
+
+      const table = document.createElement("table");
+
+      Object.entries(data).forEach(([title, list]) => {
+        const row = document.createElement("tr");
+
+        const th = document.createElement("th");
+        th.textContent = title;
+
+        const td = document.createElement("td");
+        const ul = document.createElement("ul");
+
+        list.forEach(item => {
+            const li = document.createElement("li");
+            li.innerHTML = item;   
+            ul.appendChild(li);
+        });
+
+        td.appendChild(ul);
+
+        row.appendChild(th);
+        row.appendChild(td);
+        table.appendChild(row);
+      });
+
+      container.appendChild(table);
+    }
+
+    // === ВЫЗОВ ===
+    buildAutoVerticalTable(data);
+  </script>
+
+</body>
+</html>
